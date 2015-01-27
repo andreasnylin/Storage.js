@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Storage.js - a simple JSON wrapper for localStorage</title>
+<meta charset="utf-8" />
+<meta name="Author" content="Andreas Nylin" />
+<meta name="description" content="A simple JSON wrapper for localStorage">
+<meta name="keywords" content="javascript,localstorage,json">
+<style>
+
+body {
+	font: 14px/1.3 sans-serif;
+	color: #333;
+	margin: 20px 120px;
+}
+
+pre {
+	background: #eee;
+	font-size: 13px;
+	padding: 10px;
+	overflow: auto;
+}
+
+#an {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAgCAYAAACmaK65AAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAACqUlEQVR42mI0NjZmIBKoAbEtENsDsTIQSwExHxAzM5APDgBxAIl6xKDucABiLSCWAWIhqDs+AvEzIL4LxAeB+DAQ3yLGUIAAYiFCjTUQZwKxJ9RCagJ+EtSqAHEaEAdBIwIbEARiBSC2AuJYIH4HxNuBeDoQH8VnOEAAMeGREwfiyUC8F4ijaRAIIPCHCDWgmC6App5SPIGADQhB3b4X6hdxXAoBAghXQJgD8S4gzgFidoaBA6DstxyI+4FYmgJz2KF+2QX1GwYACCBsAeEKxGuBWI9hYIE8EK8G4lAqmqkH9ZsrugRAAKEHhAkQL6Aw9KkBhKDusKKB2dJQs02QBQECCDkgRIB4NjQ5DiQAuakXWivQMsvNhvoZDAACCDkgaoHYgGHgQTAQJ9DBHgOon8EAIIBgAWEExKmDIBD4kB1HB5AK9TsDQADBAgJUonIOgoAAFYy6dLSPE+p3BoAAYoI2QHwHQSCAGncxA2AvyO8KAAEECgg75EJjAIESEJsOgL0gv9sBBBATjUtnUoAlEHMPkN0OAAEECgjVQRIQWgNotypAADENgnYDDMgOZFMeIIBAASEwSAJCcADt5gcIICaGwQNYB9JugAACBcT7QRIQ/wfSboAAAgXEc4ZRwAAQQKCAuDUaDAwMAAEECogDo8HAwAAQQKCAOATEr0d6QAAEECggHgLxppEeEAABBKs+pwLxt5EcEAABBAuI80A8ayQHBEAAITeoWoD43EgNCIAAQg6ItwyQEZsnIzEgAAIIvYkNShEJIzEwAAIIW18DNCsUBC03RgwACCBcna7TQOwOxBOB+PtICAiAAMLX+wQ1skBzjk5AvAiI39DAfhYcbLr3PgECiBjLT0AxaPLVhgGyLAA0Mw2aMeIjEJiEwHs09rsBCohPAAEGAAGrSjBQEUFjAAAAAElFTkSuQmCC');
+	display: block;
+    height: 32px;
+    width: 66px;
+}
+
+</style>
+
+<script src="storage.js"></script>
+<script>
+
+// Create or get an existing store
+var store1 = Storage('store1');
+
+// Set a value
+store1.set('myvalue', 123);
+
+// Read value
+console.log('The value of "myvalue" is: ', store1.get('myvalue') );
+
+// Set a array value
+store1.set('myarray', [1,2,3]);
+
+// Read value
+console.log('The value of "myarray" is: ', store1.get('myarray') );
+// outputs => The value of "myarray" is:  [1,2,3]
+
+// Set an object value
+store1.set('myobject', { a: 1, b: 2, c: 3});
+
+// Read value
+console.log('The value of "myobject" is: ', store1.get('myobject') );
+// outputs => The value of "myobject" is:  { a: 1, b: 2, c: 3}
+
+</script>
+
+</head>
+<body>
+
+<header>
+	<a href="http://andreasnylin.com/" id="an"></a>
+	<h1>Storage.js</h1>
+</header>
+
+<p>
+A simple JSON wrapper for localStorage that lets you save and store key/value data with automatic JSON parsing.
+</p>
+
+<h2>Examples:</h2>
+
+<pre>
+// Create or get an existing store
+var store1 = Storage('store1');
+
+// Set a value
+store1.set('myvalue', 123);
+
+// Read value
+console.log('The value of "myvalue" is: ', store1.get('myvalue') );
+// outputs => The value of "myvalue" is:  123
+
+// Set an array value
+store1.set('myarray', [1,2,3]);
+
+// Read value
+console.log('The value of "myarray" is: ', store1.get('myarray') );
+// outputs => The value of "myarray" is:  [1,2,3]
+
+// Set an object value
+store1.set('myobject', { a: 1, b: 2, c: 3});
+
+// Read value
+console.log('The value of "myobject" is: ', store1.get('myobject') );
+// outputs => The value of "myobject" is:  { a: 1, b: 2, c: 3}
+</pre>
+
+<p>
+<a href="https://github.com/andreasnylin/Storage.js">Get the code at github</a>.
+</p>
+
+<p>
+Enjoy!
+</p>
+</body>
+</html>
