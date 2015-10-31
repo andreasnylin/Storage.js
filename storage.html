@@ -59,6 +59,41 @@ store1.set('myobject', { a: 1, b: 2, c: 3});
 console.log('The value of "myobject" is: ', store1.get('myobject') );
 // outputs => The value of "myobject" is:  { a: 1, b: 2, c: 3}
 
+// Set an object value
+store1.set('myothervalue', 456);
+
+// Read value
+console.log('The value of "myothervalue" is: ', store1.get('myothervalue') );
+// outputs => The value of "myothervalue" is:  456
+
+// Unset an object value
+store1.unset('myothervalue');
+
+// Read value
+console.log('The value of "myothervalue" is: ', store1.get('myothervalue') );
+// outputs => The value of "myothervalue" is:  undefined
+
+// Set an object value
+store1.set('yetanothervalue', 789);
+
+// Read value
+console.log('The value of "yetanothervalue" is: ', store1.get('yetanothervalue') );
+// outputs => The value of "yetanothervalue" is:  789
+
+// Remove an object value
+store1.remove('yetanothervalue');
+
+// Read value
+console.log('The value of "yetanothervalue" is: ', store1.get('yetanothervalue') );
+// outputs => The value of "yetanothervalue" is:  undefined
+
+// Clear the store
+store1.clear();
+
+// Read value
+console.log('The value of "store1.data" is: ', store1.data );
+// outputs => The value of "store1.data" is:  undefined
+
 </script>
 
 </head>
@@ -84,9 +119,8 @@ store1.set('myvalue', 123);
 
 // Read value
 console.log('The value of "myvalue" is: ', store1.get('myvalue') );
-// outputs => The value of "myvalue" is:  123
 
-// Set an array value
+// Set a array value
 store1.set('myarray', [1,2,3]);
 
 // Read value
@@ -99,6 +133,41 @@ store1.set('myobject', { a: 1, b: 2, c: 3});
 // Read value
 console.log('The value of "myobject" is: ', store1.get('myobject') );
 // outputs => The value of "myobject" is:  { a: 1, b: 2, c: 3}
+
+// Set an object value
+store1.set('myothervalue', 456);
+
+// Read value
+console.log('The value of "myothervalue" is: ', store1.get('myothervalue') );
+// outputs => The value of "myothervalue" is:  456
+
+// Unset an object value
+store1.unset('myothervalue');
+
+// Read value
+console.log('The value of "myothervalue" is: ', store1.get('myothervalue') );
+// outputs => The value of "myothervalue" is:  undefined
+
+// Set an object value
+store1.set('yetanothervalue', 789);
+
+// Read value
+console.log('The value of "yetanothervalue" is: ', store1.get('yetanothervalue') );
+// outputs => The value of "yetanothervalue" is:  789
+
+// Remove an object value
+store1.remove('yetanothervalue');
+
+// Read value
+console.log('The value of "yetanothervalue" is: ', store1.get('yetanothervalue') );
+// outputs => The value of "yetanothervalue" is:  undefined
+
+// Clear the store
+store1.clear();
+
+// Read value
+console.log('The value of "store1.data" is: ', store1.data );
+// outputs => The value of "store1.data" is:  undefined
 </pre>
 
 <p>
