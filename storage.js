@@ -1,5 +1,5 @@
 /*
- * Storage.js - v1.1 - 2015-10-30
+ * Storage.js - v1.2 - 2015-10-30
  * Created by Andreas Nylin
  * andreas.nylin@gmail.com / @andreasnylin / andreasnylin.com
  */
@@ -7,6 +7,11 @@
 	'use strict';
 
 	win.Storage = function(name) {
+
+		if(!('JSON' in win)) {
+			throw('This browser does not support JSON which is required by Storage.');
+			return;
+		}
 
 		return new function() {
 
